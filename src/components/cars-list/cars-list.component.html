@@ -1,0 +1,6 @@
+<mat-tab-group animationDuration="300ms">
+  {{this.brands}}
+  <mat-tab *ngFor='let brand of this.brands' label='{{brand}}'>
+    <a mat-button color="primary" *ngFor='let car of carService.getCarsByBrand(brand) | async' routerLink='/car/{{car.id}}'>{{car.brandName}} {{car.modelName}}</a>
+  </mat-tab>
+</mat-tab-group>

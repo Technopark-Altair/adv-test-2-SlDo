@@ -1,0 +1,19 @@
+<form class="form">
+  <mat-form-field class="full-width">
+    <mat-label>Бренд</mat-label>
+    <input [(ngModel)]='carForm.brandName' matInput name='brand' placeholder="Бренд">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Модель</mat-label>
+    <input [(ngModel)]='carForm.modelName' matInput name='model' placeholder="Модель">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Цена</mat-label>
+    <input [(ngModel)]='carForm.priceInRub' matInput name='price' placeholder="Цена">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Изображение</mat-label>
+    <input [(ngModel)]='carForm.img' matInput name='img' placeholder="Изображение">
+  </mat-form-field>
+  <button (click)='addNewCar()' mat-raised-button color="primary">Добавить</button>
+</form>
